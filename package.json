@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app/app.ts",
+    "start": "ts-node src/app/app.ts"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,7 @@
     "@types/express": "^5.0.3",
     "@types/node": "^24.0.1",
     "@types/pg": "^8.15.4",
+    "nodemon": "^3.1.10",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
   },

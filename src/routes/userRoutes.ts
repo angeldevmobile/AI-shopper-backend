@@ -1,10 +1,8 @@
-import { Router, Request, Response, NextFunction } from 'express';
-import { registrarUsuario } from '../controllers/userController';
+import { Router } from 'express';
+import { registrarUsuarioCompleto } from '../controllers/userController';
 
 const router = Router();
 
-router.post('/registrar', (req: Request, res: Response, next: NextFunction) => {
-  registrarUsuario(req, res).catch(next);
-});
+router.post('/completar-perfil', registrarUsuarioCompleto);
 
 export default router;
