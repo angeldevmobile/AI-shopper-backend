@@ -17,7 +17,7 @@ export const registrarUsuarioCompleto = async (
     const fecha = new Date();
     const result = await pool.query(
       `INSERT INTO usuarios (correo, contrasena, nombres, apellidos, direccion, telefono, rol_id, fecha_creacion, fecha_actualizacion)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $8)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $8)
        RETURNING *`,
       [correo, contrasena, nombres, apellidos, direccion, telefono, rol_id, fecha]
     );
