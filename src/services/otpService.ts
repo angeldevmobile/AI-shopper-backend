@@ -18,18 +18,16 @@ export async function sendEmail(email: string, otp: string): Promise<void> {
   try {
     // Crea un objeto transportador usando el transporte SMTP predeterminado
     let transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST, // Reemplaza con tu host SMTP
-      port: parseInt(process.env.SMTP_PORT || '587'), // Reemplaza con tu puerto SMTP
-      secure: false, // mejora más tarde con STARTTLS
+      service: 'gmail', // O el servicio que uses
       auth: {
-        user: process.env.SMTP_USER, // Reemplaza con tu correo electrónico
-        pass: process.env.SMTP_PASS, // Reemplaza con tu contraseña de correo electrónico
+        user: 'tuemail@gmail.com', // Cambia por tu correo
+        pass: 'tu_contraseña_de_app', // Usa una contraseña de aplicación
       },
     });
 
     // Define las opciones de correo electrónico
     let mailOptions = {
-      from: `"AI Shopper" <${process.env.SMTP_USER}>`, // dirección del remitente
+      from: 'tuemail@gmail.com', // El mismo correo que arriba
       to: email, // lista de destinatarios
       subject: 'Verificación OTP', // Asunto
       text: `Tu OTP es: ${otp}`, // cuerpo de texto plano
