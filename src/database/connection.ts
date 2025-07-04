@@ -4,7 +4,7 @@ const pool = new Pool({
   user: 'postgres',
   host: 'localhost',
   database: 'BD_AI_SHOP',
-  password: 'admin', // Reemplaza por tu contraseña real
+  password: '123', // Reemplaza por tu contraseña real
   port: 5432,
 });
 

@@ -10,9 +10,6 @@ app.use(express.json());
 app.use('/usuarios', userRoutes);
 app.use('/roles', roleRoutes);
 
-const userRouter = require('./routes/usuarios');
-app.use('/usuarios', userRouter);
-
 app.listen(3000, '0.0.0.0', () => {
   console.log('Servidor corriendo en puerto 3000');
 });
